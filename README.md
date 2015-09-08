@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 [![Issue Stats](http://issuestats.com/github/fsprojects/ProjectScaffold/badge/issue)](http://issuestats.com/github/fsprojects/ProjectScaffold)
 [![Issue Stats](http://issuestats.com/github/fsprojects/ProjectScaffold/badge/pr)](http://issuestats.com/github/fsprojects/ProjectScaffold)
 
@@ -29,3 +30,7 @@ Documentation: http://fsprojects.github.io/ProjectScaffold
 - [@sergey-tihon](https://github.com/sergey-tihon)
 
 The default maintainer account for projects under "fsprojects" is [@fsprojectsgit](https://github.com/fsprojectsgit) - F# Community Project Incubation Space (repo management)
+=======
+# canandroid
+f# android ui automation framework
+>>>>>>> 1b7f91d2ca3e52fb92bcb678cde780ae90dfe863
