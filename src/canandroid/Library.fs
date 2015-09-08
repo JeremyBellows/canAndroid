@@ -24,7 +24,8 @@ module canandroidMain =
 
     let startDriver () =
         let uri = new System.Uri(url)
-        driver <- new AndroidDriver<AppiumWebElement>(uri, capabilities, System.TimeSpan.FromSeconds(60.0))     
+        driver <- new AndroidDriver<AppiumWebElement>(uri, capabilities, System.TimeSpan.FromSeconds(60.0))    
+        System.Threading.Thread.Sleep(2000) 
 
     let navigateToActivity activity =
         sprintf "and-activity://%s.%s" applicationName activity |> driver.Navigate().GoToUrl
