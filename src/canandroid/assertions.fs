@@ -3,6 +3,13 @@
     [<AutoOpen>]
     module assertions =
         open configuration
+        open exceptions
+
+        let insist booleanProperty =
+            match booleanProperty with
+            | true -> true
+            | false -> raise <| CanAndroidInsistFailedException("Insist Failed!")
+                       false
 
         let private equals selector value =
             let element = selector |> find
