@@ -29,21 +29,37 @@ module core =
         driver <- new AndroidDriver<AppiumWebElement>(uri, capabilities, System.TimeSpan.FromSeconds(60.0))    
         wait 2 //this is necessary to allow the app to start up           
 
-    let find selector =
-        let findFunctions = [|
+    let private findFunctions = [|
             (fun selector -> selector |> By.Name)
             (fun selector -> selector |> By.TagName) 
             (fun selector -> selector |> By.ClassName)  
             (fun selector -> selector |> By.Id)  
         |]
 
-        let executeFindFunction findFunction =
-            try
-                Some(driver.FindElement(selector |> findFunction))
-            with
-            | _ -> None
+    let private executeFindFunction selector findFunction =
+        try
+            Some(driver.FindElement(selector |> findFunction))
+        with
+        | _ -> None
+    
+    let getElements selector =
+        let elements = findFunctions |> Array.map (selector |> executeFindFunction) |> Array.filter (fun item -> item.IsSome)
 
-        findFunctions |> Array.map executeFindFunction |> Array.filter (fun item -> item.IsSome) |> Array.map (fun item -> item.Value)
-               
+        match elements |> Array.length with
+            | 0 -> reporter.report <| sprintf "Failed to find any elements with selector %s" selector
+                   Array.empty                   
+            | _ -> elements 
+
+    let findMany selector =
+        selector |> getElements|> Array.map (fun item -> item.Value)  
+    
+    let find selector =
+        let elements = selector |> getElements
+
+        if (elements |> Array.isEmpty) then
+            None
+        else
+            elements.[0]
+
     let quit () =
         driver.Quit()

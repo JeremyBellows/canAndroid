@@ -5,7 +5,7 @@
         open configuration
 
         let tap selector =
-            let elements = selector |> find
+            let elements = selector |> findMany
             
             reporter.report <| sprintf "Tapping Element %s" selector
             match elements |> Array.length with
