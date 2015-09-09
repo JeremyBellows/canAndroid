@@ -27,7 +27,7 @@ open SourceLink
 
 // The name of the project
 // (used by attributes in AssemblyInfo, name of a NuGet package and directory in 'src')
-let project = "canandroid"
+let project = "canAndroid"
 
 // Short summary of the project
 // (used as description in AssemblyInfo and as a short summary for NuGet package)
@@ -41,10 +41,10 @@ let description = "Android UI Testing Framework"
 let authors = [ "Jeremy Bellows" ]
 
 // Tags for your project (for NuGet package)
-let tags = "f# fsharp canandroid selenium ui automation tests android remote"
+let tags = "f# fsharp canAndroid selenium ui automation tests android remote"
 
 // File system information 
-let solutionFile  = "canandroid.sln"
+let solutionFile  = "canAndroid.sln"
 
 // Pattern specifying assemblies to be tested using NUnit
 let testAssemblies = "tests/**/bin/Release/*Tests*.dll"
@@ -55,7 +55,7 @@ let gitOwner = "JeremyBellows"
 let gitHome = "https://github.com/" + gitOwner
 
 // The name of the project on GitHub
-let gitName = "canandroid"
+let gitName = "canAndroid"
 
 // The url for the raw files hosted
 let gitRaw = environVarOrDefault "gitRaw" "https://raw.github.com/JeremyBellows"

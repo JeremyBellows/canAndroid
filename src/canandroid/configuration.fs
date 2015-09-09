@@ -1,4 +1,4 @@
-﻿namespace canandroid
+﻿namespace canAndroid
 open OpenQA.Selenium.Remote
 
     module configuration =

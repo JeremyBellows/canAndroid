@@ -10,10 +10,6 @@ Introducing your project
 Say more
 
 *)
-#r "canandroid.dll"
-open canandroid
+#r "canAndroid.dll"
+open canAndroid
 
-Library.hello 0
-(**
-Some more info
-*)

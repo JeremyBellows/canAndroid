@@ -11,17 +11,17 @@
 // (This is the original behaviour of ProjectScaffold prior to multi project support)
 let referenceBinaries = []
 // Web site location for the generated documentation
-let website = "/canandroid"
+let website = "/canAndroid"
 
-let githubLink = "http://github.com/JeremyBellows/canandroid"
+let githubLink = "http://github.com/JeremyBellows/canAndroid"
 
 // Specify more information about your project
 let info =
-  [ "project-name", "canandroid"
+  [ "project-name", "canAndroid"
     "project-author", "Jeremy Bellows"
     "project-summary", "Android UI Testing Framework"
     "project-github", githubLink
-    "project-nuget", "http://nuget.org/packages/canandroid" ]
+    "project-nuget", "http://nuget.org/packages/canAndroid" ]
 
 // --------------------------------------------------------------------------------------
 // For typical project, no changes are needed below

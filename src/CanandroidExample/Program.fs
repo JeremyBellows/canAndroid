@@ -1,5 +1,5 @@
-﻿open canandroid
-open canandroid.canandroidMain
+﻿open canAndroid
+open canAndroid.canAndroidMain
 
 [<EntryPoint>]
 let main argv = 

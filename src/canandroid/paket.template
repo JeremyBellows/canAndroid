@@ -4,17 +4,17 @@ owners
 authors 
     Jeremy Bellows
 projectUrl
-    http://github.com/JeremyBellows/canandroid
+    http://github.com/JeremyBellows/canAndroid
 iconUrl
-    https://raw.githubusercontent.com/JeremyBellows/canandroid/master/docs/files/img/logo.png
+    https://raw.githubusercontent.com/JeremyBellows/canAndroid/master/docs/files/img/logo.png
 licenseUrl
-    http://github.com/JeremyBellows/canandroid/blob/master/LICENSE.txt
+    http://github.com/JeremyBellows/canAndroid/blob/master/LICENSE.txt
 requireLicenseAcceptance
     false
 copyright
     Copyright 2015
 tags
-    f# fsharp canandroid selenium ui automation tests android remote
+    f# fsharp canAndroid selenium ui automation tests android remote
 summary
     Android UI Testing Framework
 description

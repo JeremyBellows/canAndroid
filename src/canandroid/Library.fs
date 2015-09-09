@@ -1,11 +1,11 @@
-namespace canandroid
+namespace canAndroid
 open OpenQA.Selenium.Appium
 open OpenQA.Selenium.Appium.Android
 open OpenQA.Selenium.Appium.Enums
 open OpenQA.Selenium
 open configuration
 
-module canandroidMain = 
+module canAndroidMain = 
     let mutable (driver : AndroidDriver<AppiumWebElement>) = null
 
     let puts text =

@@ -10,7 +10,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".paket", ".paket", "{63297B
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{A6A6AF7D-D6E3-442D-9B1E-58CC91879BE1}"
 EndProject
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "canandroid", "src\canandroid\canandroid.fsproj", "{6A11AEA1-CC04-4E1B-970E-153092DC715A}"
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "canAndroid", "src\canAndroid\canAndroid.fsproj", "{6A11AEA1-CC04-4E1B-970E-153092DC715A}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "project", "project", "{BF60BC93-E09B-4E5F-9D85-95A519479D54}"
 	ProjectSection(SolutionItems) = preProject
@@ -33,9 +33,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "content", "content", "{8E6D
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{ED8079DD-2B06-4030-9F0F-DC548F98E1C4}"
 EndProject
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "canandroid.Tests", "tests\canandroid.Tests\canandroid.Tests.fsproj", "{4FA40340-B819-4FD3-A175-9D044750E4AF}"
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "canAndroid.Tests", "tests\canAndroid.Tests\canAndroid.Tests.fsproj", "{4FA40340-B819-4FD3-A175-9D044750E4AF}"
 EndProject
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "CanandroidExample", "src\CanandroidExample\CanandroidExample.fsproj", "{E98A4E9E-5D11-4275-9BE4-43EFA1E5F562}"
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "canAndroidExample", "src\canAndroidExample\canAndroidExample.fsproj", "{E98A4E9E-5D11-4275-9BE4-43EFA1E5F562}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

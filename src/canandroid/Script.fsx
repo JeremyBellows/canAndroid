@@ -2,7 +2,7 @@
 // for more guidance on F# programming.
 
 #load "Library.fs"
-open canandroid
+open canAndroid
 
 let num = Library.hello 42
 printfn "%i" num
