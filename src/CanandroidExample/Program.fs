@@ -17,6 +17,10 @@ let main argv =
     match "formula" == "6" with
     | true -> printf "Test Passed\n"
     | false -> printf "Test Failed\n"
+        
+    match "formula" != "0" with
+    | true -> printf "Test Passed\n"
+    | false -> printf "Test Failed\n"
 
     printf "Press Enter to Exit..."
     System.Console.ReadLine() |> ignore
