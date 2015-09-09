@@ -60,9 +60,11 @@
   -->
   <Import Project="..\..\.paket\paket.targets" />
   <ItemGroup>
+    <Compile Include="reporter.fs" />
     <Compile Include="configuration.fs" />
-    <Compile Include="Library.fs" />
-    <None Include="Script.fsx" />
+    <Compile Include="canAndroid.fs" />
+    <Compile Include="actions.fs" />
+    <Compile Include="assertions.fs" />
     <None Include="paket.references" />
     <None Include="paket.template" />
     <Content Include="packages.config" />

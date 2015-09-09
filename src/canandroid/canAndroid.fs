@@ -5,12 +5,14 @@ open OpenQA.Selenium.Appium.Enums
 open OpenQA.Selenium
 open configuration
 
-module canAndroidMain = 
+[<AutoOpen>]
+module core = 
     let mutable (driver : AndroidDriver<AppiumWebElement>) = null
+    
+    let wait seconds =
+        //Need to convert the seconds into milliseconds
+        seconds * 1000 |> System.Threading.Thread.Sleep
 
-    let puts text =
-        printf "%s\n" text
-           
     let setAppTo app =
         applicationName <- app
         capabilities.SetCapability(MobileCapabilityType.AppPackage, app)
@@ -25,10 +27,7 @@ module canAndroidMain =
     let startDriver () =
         let uri = new System.Uri(url)
         driver <- new AndroidDriver<AppiumWebElement>(uri, capabilities, System.TimeSpan.FromSeconds(60.0))    
-        System.Threading.Thread.Sleep(2000) 
-
-    let navigateToActivity activity =
-        sprintf "and-activity://%s.%s" applicationName activity |> driver.Navigate().GoToUrl
+        wait 2 //this is necessary to allow the app to start up           
 
     let find selector =
         let findFunctions = [|
@@ -45,22 +44,6 @@ module canAndroidMain =
             | _ -> None
 
         findFunctions |> Array.map executeFindFunction |> Array.filter (fun item -> item.IsSome) |> Array.map (fun item -> item.Value)
-    
-    let tap selector =
-        let elements = selector |> find
-        puts <| sprintf "Tapping Element %s" selector
-        match elements |> Array.length with
-        | 0 -> puts "Failed to find Element"
-        | _ -> elements |> Array.iter(fun element -> element.Click())
-
-    let (==) selector value =
-        let elements = selector |> find
-        puts <| sprintf "Testing if element %s is equal to %s" selector value
-        match elements |> Array.length with
-        | 0 -> puts "Failed to find Element"
-               false
-        | _ -> elements.[0].Text = value        
                
-
     let quit () =
         driver.Quit()
