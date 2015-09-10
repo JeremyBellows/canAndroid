@@ -1,4 +1,5 @@
 ﻿open canAndroid
+open canAndroid.testRunner
 
 [<EntryPoint>]
 let main argv = 
@@ -9,18 +10,31 @@ let main argv =
 
     navigateToActivity configuration.mainActivity
 
-    tap "2"
-    tap "+"
-    tap "4"
-    tap "="
+    let additionTest () =
+        "Verify that 2 + 4 is 6" &&& (fun _ -> 
+            tap "2"
+            tap "+"
+            tap "4"
+            tap "="
 
-    match "formula" == "6" with
-    | true -> printf "Test Passed\n"
-    | false -> printf "Test Failed\n"
-        
-    match "formula" != "0" with
-    | true -> printf "Test Passed\n"
-    | false -> printf "Test Failed\n"
+            insist <| ("formula" == "6")
+            insist <| ("formula" != "0")
+        )
+    
+    let thisTestShouldFail () =
+        "This test should fail" &&& (fun _ ->
+            tap "2"
+            tap "-"
+            tap "2"
+            tap "="
+
+            insist <| ("formula" == "9001")
+        )
+
+    additionTest ()
+    thisTestShouldFail ()
+
+    run()
 
     printf "Press Enter to Exit..."
     System.Console.ReadLine() |> ignore

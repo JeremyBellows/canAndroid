@@ -63,8 +63,10 @@
     <Compile Include="reporter.fs" />
     <Compile Include="configuration.fs" />
     <Compile Include="canAndroid.fs" />
+    <Compile Include="exceptions.fs" />
     <Compile Include="actions.fs" />
     <Compile Include="assertions.fs" />
+    <Compile Include="testRunner.fs" />
     <None Include="paket.references" />
     <None Include="paket.template" />
     <Content Include="packages.config" />

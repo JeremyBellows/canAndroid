@@ -7,9 +7,10 @@
 
         let insist booleanProperty =
             match booleanProperty with
-            | true -> true
-            | false -> raise <| CanAndroidInsistFailedException("Insist Failed!")
-                       false
+            | true -> reporter.report "Insist has held true!"
+            | false -> reporter.report "Insist has failed"
+                       raise <| CanAndroidInsistFailedException("Insist Failed!")
+                       ()
 
         let private equals selector value =
             let element = selector |> find
