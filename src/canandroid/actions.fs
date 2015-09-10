@@ -9,7 +9,7 @@
             
             reporter.report <| sprintf "Tapping Element %s" selector
             match elements |> Array.length with
-            | 0 -> reporter.report "Failed to find Element"
+            | 0 -> ()
             | _ -> elements |> Array.iter(fun element -> element.Click())
 
 

@@ -26,7 +26,8 @@
                     test.testFunction()
                     result.Pass
                 with
-                | ex -> sprintf "Test Failed: %s" ex.StackTrace |> configuration.reporter.report
+                | ex -> sprintf "Test Failed: %s" ex.Message|> configuration.reporter.report
+                        ex.StackTrace |> configuration.reporter.report
                         result.Fail
 
             "Running Tests..." |> configuration.reporter.report

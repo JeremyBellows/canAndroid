@@ -62,8 +62,8 @@
   <ItemGroup>
     <Compile Include="reporter.fs" />
     <Compile Include="configuration.fs" />
-    <Compile Include="canAndroid.fs" />
     <Compile Include="exceptions.fs" />
+    <Compile Include="canAndroid.fs" />
     <Compile Include="actions.fs" />
     <Compile Include="assertions.fs" />
     <Compile Include="testRunner.fs" />

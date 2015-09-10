@@ -4,6 +4,7 @@ open OpenQA.Selenium.Appium.Android
 open OpenQA.Selenium.Appium.Enums
 open OpenQA.Selenium
 open configuration
+open exceptions
 
 [<AutoOpen>]
 module core = 
@@ -44,11 +45,11 @@ module core =
     
     let getElements selector =
         let elements = findFunctions |> Array.map (selector |> executeFindFunction) |> Array.filter (fun item -> item.IsSome)
-
+        
         match elements |> Array.length with
-            | 0 -> reporter.report <| sprintf "Failed to find any elements with selector %s" selector
-                   Array.empty                   
-            | _ -> elements 
+                | 0 -> raise <| CanAndroidFailedToFindElementException(sprintf "Failed to find any elements with selector %s" selector)
+                       Array.empty                   
+                | _ -> elements         
 
     let findMany selector =
         selector |> getElements|> Array.map (fun item -> item.Value)  
