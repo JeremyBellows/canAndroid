@@ -2,16 +2,16 @@
 open canAndroid.testRunner
 
 [<EntryPoint>]
-let main argv = 
+let main argv =
     setAppTo "com.android.calculator2"
     setMainActivityTo "Calculator"
-    setDeviceNameTo "AndroidEmulator"
+    setDeviceNameTo "TestDevice"
     startDriver()
 
     navigateToActivity configuration.mainActivity
 
     let additionTest () =
-        "Verify that 2 + 4 is 6" &&& (fun _ -> 
+        "Verify that 2 + 4 is 6" &&& (fun _ ->
             tap "2"
             tap "+"
             tap "4"
@@ -20,7 +20,7 @@ let main argv =
             insist <| ("formula" == "6")
             insist <| ("formula" != "0")
         )
-    
+
     let thisTestShouldFail () =
         "This test should fail" &&& (fun _ ->
             tap "2"

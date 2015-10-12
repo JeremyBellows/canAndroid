@@ -1,7 +1,7 @@
 ﻿namespace System
 open System.Reflection
 
-[<assembly: AssemblyTitleAttribute("canAndroid")>]
+[<assembly: AssemblyTitleAttribute("canandroid")>]
 [<assembly: AssemblyProductAttribute("canAndroid")>]
 [<assembly: AssemblyDescriptionAttribute("Android UI Testing Framework")>]
 [<assembly: AssemblyVersionAttribute("1.0")>]

@@ -33,9 +33,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "content", "content", "{8E6D
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{ED8079DD-2B06-4030-9F0F-DC548F98E1C4}"
 EndProject
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "canAndroid.Tests", "tests\canAndroid.Tests\canAndroid.Tests.fsproj", "{4FA40340-B819-4FD3-A175-9D044750E4AF}"
-EndProject
 Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "canAndroidExample", "src\canAndroidExample\canAndroidExample.fsproj", "{E98A4E9E-5D11-4275-9BE4-43EFA1E5F562}"
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "canAndroid.Tests", "tests\canAndroid.Tests\canAndroid.Tests.fsproj", "{4FA40340-B819-4FD3-A175-9D044750E4AF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
